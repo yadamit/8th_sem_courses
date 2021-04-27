@@ -1,0 +1,63 @@
+
+FREE-FORM ANSWER FILE
+
+Record here your reasoning in answering Questions 5, 6 and 7.
+What equations, principles, methods did you use?
+Why was the question (or its part) easier to solve than general case of this problem type?
+What intermediate results did you obtain?
+
+THIS IS AN INTEGRAL PART OF THE EXAM. EVEN IF A CORRECT ANSWER IS GIVEN
+IN answers.py, IF A PROPER EXPLANATION IS MISSING, FEWER OR NO POINTS
+WILL BE AWARDED.
+
+
+QUESTION 1 -- No need to elaborate
+QUESTION 2 -- No need to elaborate
+QUESTION 3 -- No need to elaborate
+QUESTION 4 -- No need to elaborate
+
+QUESTION 5 -- How did you arrive at the solution?
+Answer -- We know the initial belief of states before nay observation. After getting an observation, we can 
+find posterior probabilities of states using bayes rule. 
+P(s0/obs1) = P(s0,obs1)/P(obs1)
+P(s1/obs1) = P(s1,obs1)/P(obs1)
+where P(obs1) = P(s0)*P(obs1/s0) + P(s1)*P(obs1/s1)
+
+
+QUESTION 6 -- How did you arrive at the solution (separately both games)?
+
+1st game:
+In first game, there is a pure Nash equilibrium using iterated dominant strategy. 
+First, B is eliminated. Then D is eliminated. This A,C is the dominant strategy.
+
+2nd game:
+There is a mixed Nash equilibrium. 
+We assume probability of row player playing strategy E, P(E)=x and P(F)=1-x.
+Similarly, P(G)=y and P(H)=1-y.
+Then each player chooses their startegy in a way that it makes other player's strategy indifferent.
+Therefore, (-4)(x)+(-1)(1-x) = (1)(x) + (-3)(1-x). 
+And (2)(y) + (-1)(1-y) = (-1)(y) + (5)(1-y).
+On solving we get, x=2/7 and y=2/3.
+
+
+
+QUESTION 7 -- How did you arrive at the solution (separately all 5 cases)?
+
+(a) A is a leaf node, so P(A) is same as given.
+
+
+(b) A is independent on B (according to the Bayesian Network). So P(A/B)=P(A).
+
+
+(c) P(A,B,C) = P(A)*P(B)*P(C/A,B) = 0.2*0.4*0.5 = 0.040.
+Because, A and B are leaf nodes and C depends upon A and B. So, we need to take conditional probability of C.
+
+
+(d) P(-A,-B,-C) = P(-A)*P(-B)*P(-C/-A,-B) = (1-P(A))*(1-P(B))*(1-P(C/-A,-B)) = 0.8*0.6*(1-0.8) = 0.096
+
+
+(e) P(C/A) = P(C/A,B)*P(B) + P(C/A,-B)*P(-B) = 0.5*0.4 + 0.6*0.6 = 0.56
+
+
+
+QUESTION 8 -- No need to elaborate
